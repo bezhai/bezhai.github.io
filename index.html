@@ -107,7 +107,7 @@
 </nav>
 
     <div class="view intro-2" id="background"
-         style="background: url('/img/default.png')no-repeat center center;
+         style="background: url('/img/hibike-third-1.png')no-repeat center center;
            background-size: cover;
            background-attachment: fixed;">
       <div class="full-bg-img">
@@ -145,33 +145,75 @@
     
     
     <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/12/27/hello-world/">
-        <p class="h4 index-header">Hello World</p>
+      <a href="/2019/12/28/test/">
+        <p class="h4 index-header">test</p>
         
         
           
         
         <div class="index-excerpt" >
-          <div class="index-text mb-1">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
+          <div class="index-text mb-1">基础知识存储器存储单元
+存储器由存储单元组成，每个单元从 0 开始编号
+一个存储单元能存储1 Byte 数据，即8 bit
 
-More info: Writing
-Run server1$ hexo server
+CPU读写数据
+数据读写交互数据
 
-More info: Server
-Generate static files1$ hexo generate
+存储单元地址（地址信息）
+器件选择，读或写的命令（控制信息）
+读写数据内容（数据信息）
 
-More info: Generating
-Deploy to remote sites1$ hexo deploy
 
-More info: Deployment
-</div>
+总线
+计算机中专门连接CPU和其他芯片的导线
+
+读取数据过程
+
+CPU将地址信息通过地址线发出
+CPU通过控制线发出内存读/写指令，选中存储器芯片，通知其将读取/写入数据
+存储器将规定地址的数据通过数据线送入CPU
+
+
+地址总线
+
+CPU寻址用线
+CPU的地址线数量N称为地址总线的宽度，可寻找2N个内存单元
+
+
+数据总线
+
+完成CPU与其他器件的数据传输
+8086 CPU数据总线宽度为 16，8088 为 8，即 8088 每次可以传输两个字节的内容
+
+
+控制总线
+
+反映CPU对外部器件的控制能力
+读信号输出和写信号输出分别由不同的控制线负责
+
+
+
+存储器类型
+从读写属性区分
+
+随机存储器(RAM)
+可读可写，但必须带电存储，关机后内容丢失
+
+只读存储器(ROM)
+只可读不可写，关机后内容不丢失
+
+
+
+从功能区分
+
+随机存储器
+存放供 </div>
         </div>
       </a>
 
       <div>
         
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-27&nbsp;&nbsp;
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-28&nbsp;&nbsp;
         
         
         
@@ -272,22 +314,8 @@ More info: Deployment
 
 
 
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
 
 <!-- Plugins -->
-
-
-  
-
-  
-
-  
-
-  
-
-  <!-- cnzz Analytics -->
-  
 
 
 
@@ -365,6 +393,57 @@ More info: Deployment
 
 
 
+
+  
+  
+    <script>
+      !function (e, t, a) {
+        function r() {
+          for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
+          requestAnimationFrame(r)
+        }
+
+        function n() {
+          var t = "function" == typeof e.onclick && e.onclick;
+          e.onclick = function (e) {
+            t && t(), o(e)
+          }
+        }
+
+        function o(e) {
+          var a = t.createElement("div");
+          a.className = "heart", s.push({
+            el: a,
+            x: e.clientX - 5,
+            y: e.clientY - 5,
+            scale: 1,
+            alpha: 1,
+            color: c()
+          }), t.body.appendChild(a)
+        }
+
+        function i(e) {
+          var a = t.createElement("style");
+          a.type = "text/css";
+          try {
+            a.appendChild(t.createTextNode(e))
+          } catch (t) {
+            a.styleSheet.cssText = e
+          }
+          t.getElementsByTagName("head")[0].appendChild(a)
+        }
+
+        function c() {
+          return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+        }
+
+        var s = [];
+        e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
+          setTimeout(e, 1e3 / 60)
+        }, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r()
+      }(window, document);
+    </script>
+  
 
 
 
